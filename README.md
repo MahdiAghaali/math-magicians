@@ -43,7 +43,7 @@ npm run start
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/MahdiAghaali/math-magicians/issues).
 
 ## Show your support
 
