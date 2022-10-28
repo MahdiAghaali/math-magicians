@@ -40,7 +40,7 @@ export default class Calculator extends React.PureComponent {
         <button type="button" className="button digit" onClick={this.test}>7</button>
         <button type="button" className="button digit" onClick={this.test}>8</button>
         <button type="button" className="button digit" onClick={this.test}>9</button>
-        <button type="button" className="button operator" onClick={this.test}>/</button>
+        <button type="button" className="button operator" onClick={this.test}>÷</button>
         <button type="button" className="button digit zero" onClick={this.test}>0</button>
         <button type="button" className="button other" onClick={this.test}>.</button>
         <button type="button" className="button operator" onClick={this.test}>=</button>
