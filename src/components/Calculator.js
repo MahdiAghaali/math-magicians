@@ -1,9 +1,23 @@
 import React from 'react';
-import Button from './Button';
-import Display from './Display';
+import calculate from '../logic/calculate';
 
 export default class Calculator extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+    this.test = this.test.bind(this);
+  }
+
+  test(event) {
+    this.setState((testing) => calculate(testing, event.target.textContent));
+  }
+
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="calculator">
         <span className="display">
