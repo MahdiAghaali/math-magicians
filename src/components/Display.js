@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = (props) => {
-  const { displayText } = props;
-  return (
-    <div className="display">
-      {displayText}
-    </div>
-  );
-};
+// eslint-disable-next-line react/prefer-stateless-function
+class Display extends React.Component {
+  render() {
+    const { displayText } = this.props;
+    return (
+      <div className="display">
+        {displayText}
+      </div>
+    );
+  }
+}
 
 Display.defaultProps = {
   displayText: 0,
