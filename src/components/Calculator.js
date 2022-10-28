@@ -1,31 +1,49 @@
 import React from 'react';
-import Button from './Button';
-import Display from './Display';
+import calculate from '../logic/calculate';
 
 export default class Calculator extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+    this.test = this.test.bind(this);
+  }
+
+  test(event) {
+    this.setState((testing) => calculate(testing, event.target.textContent));
+  }
+
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="calculator">
-        <Display />
-        <Button displayText="AC" type="other" />
-        <Button displayText="+/-" type="other" />
-        <Button displayText="%" type="other" />
-        <Button displayText="+" type="operator" />
-        <Button displayText="1" type="digit" />
-        <Button displayText="2" type="digit" />
-        <Button displayText="3" type="digit" />
-        <Button displayText="-" type="operator" />
-        <Button displayText="4" type="digit" />
-        <Button displayText="5" type="digit" />
-        <Button displayText="6" type="digit" />
-        <Button displayText="x" type="operator" />
-        <Button displayText="7" type="digit" />
-        <Button displayText="8" type="digit" />
-        <Button displayText="9" type="digit" />
-        <Button displayText="/" type="operator" />
-        <Button displayText="0" type="digit zero" />
-        <Button displayText="." type="other" />
-        <Button displayText="=" type="operator" />
+        <span className="display">
+          {total}
+          {operation}
+          {next}
+        </span>
+        <button type="button" className="button other" onClick={this.test}>AC</button>
+        <button type="button" className="button other" onClick={this.test}>+/-</button>
+        <button type="button" className="button other" onClick={this.test}>%</button>
+        <button type="button" className="button operator" onClick={this.test}>+</button>
+        <button type="button" className="button digit" onClick={this.test}>1</button>
+        <button type="button" className="button digit" onClick={this.test}>2</button>
+        <button type="button" className="button digit" onClick={this.test}>3</button>
+        <button type="button" className="button operator" onClick={this.test}>-</button>
+        <button type="button" className="button digit" onClick={this.test}>4</button>
+        <button type="button" className="button digit" onClick={this.test}>5</button>
+        <button type="button" className="button digit" onClick={this.test}>6</button>
+        <button type="button" className="button operator" onClick={this.test}>x</button>
+        <button type="button" className="button digit" onClick={this.test}>7</button>
+        <button type="button" className="button digit" onClick={this.test}>8</button>
+        <button type="button" className="button digit" onClick={this.test}>9</button>
+        <button type="button" className="button operator" onClick={this.test}>÷</button>
+        <button type="button" className="button digit zero" onClick={this.test}>0</button>
+        <button type="button" className="button other" onClick={this.test}>.</button>
+        <button type="button" className="button operator" onClick={this.test}>=</button>
       </div>
     );
   }
