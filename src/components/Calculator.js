@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
+import Button from './Button';
 
 export default function Calculator() {
   const [state, setState] = useState({
@@ -12,6 +13,28 @@ export default function Calculator() {
     setState((testing) => calculate(testing, event.target.textContent));
   };
 
+  const buttons = [
+    { value: 'AC', class: 'button other AC' },
+    { value: '+/-', class: 'button other' },
+    { value: '%', class: 'button other' },
+    { value: '÷', class: 'button operator' },
+    { value: '7', class: 'button digit' },
+    { value: '8', class: 'button digit' },
+    { value: '9', class: 'button digit' },
+    { value: 'x', class: 'button operator' },
+    { value: '4', class: 'button digit' },
+    { value: '5', class: 'button digit' },
+    { value: '6', class: 'button digit' },
+    { value: '-', class: 'button operator' },
+    { value: '1', class: 'button digit' },
+    { value: '2', class: 'button digit' },
+    { value: '3', class: 'button digit' },
+    { value: '+', class: 'button operator' },
+    { value: '0', class: 'button digit zero' },
+    { value: '.', class: 'button other' },
+    { value: '=', class: 'button operator' },
+  ];
+
   return (
     <div className="calculator">
       <span className="display">
@@ -19,25 +42,14 @@ export default function Calculator() {
         {state.operation}
         {state.next}
       </span>
-      <button type="button" className="button other" onClick={handeClick}>AC</button>
-      <button type="button" className="button other" onClick={handeClick}>+/-</button>
-      <button type="button" className="button other" onClick={handeClick}>%</button>
-      <button type="button" className="button operator" onClick={handeClick}>+</button>
-      <button type="button" className="button digit" onClick={handeClick}>1</button>
-      <button type="button" className="button digit" onClick={handeClick}>2</button>
-      <button type="button" className="button digit" onClick={handeClick}>3</button>
-      <button type="button" className="button operator" onClick={handeClick}>-</button>
-      <button type="button" className="button digit" onClick={handeClick}>4</button>
-      <button type="button" className="button digit" onClick={handeClick}>5</button>
-      <button type="button" className="button digit" onClick={handeClick}>6</button>
-      <button type="button" className="button operator" onClick={handeClick}>x</button>
-      <button type="button" className="button digit" onClick={handeClick}>7</button>
-      <button type="button" className="button digit" onClick={handeClick}>8</button>
-      <button type="button" className="button digit" onClick={handeClick}>9</button>
-      <button type="button" className="button operator" onClick={handeClick}>÷</button>
-      <button type="button" className="button digit zero" onClick={handeClick}>0</button>
-      <button type="button" className="button other" onClick={handeClick}>.</button>
-      <button type="button" className="button operator" onClick={handeClick}>=</button>
+      {buttons.map((btn) => (
+        <Button
+          key={btn.value}
+          buttonValue={btn.value}
+          buttonClass={btn.class}
+          handeClick={handeClick}
+        />
+      ))}
     </div>
   );
 }
