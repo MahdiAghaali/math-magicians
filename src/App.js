@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {
+  BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -13,12 +14,14 @@ export default class App extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/calculator" element={<CalcSection />} />
-          <Route path="/quotes" element={<Quotes />} />
-        </Routes>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/calculator" element={<CalcSection />} />
+            <Route path="/quotes" element={<Quotes />} />
+          </Routes>
+        </Router>
       </div>
     );
   }

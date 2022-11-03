@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`operate(numberOne, numberTwo, operation) renders App correctly 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <h1>
+      Math Magician
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/calculator"
+            onClick={[Function]}
+          >
+            calculator
+          </a>
+        </li>
+        <li>
+          <a
+            href="/quotes"
+            onClick={[Function]}
+          >
+            quotes
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h1>
+      Welcome to Math Magician!
+    </h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </section>
+</div>
+`;
+
+exports[`operate(numberOne, numberTwo, operation) renders Calculator correctly 1`] = `
+<div
+  className="calculator"
+>
+  <span
+    className="display"
+  />
+  <button
+    className="button other AC"
+    onClick={[Function]}
+    type="button"
+  >
+    AC
+  </button>
+  <button
+    className="button other"
+    onClick={[Function]}
+    type="button"
+  >
+    +/-
+  </button>
+  <button
+    className="button other"
+    onClick={[Function]}
+    type="button"
+  >
+    %
+  </button>
+  <button
+    className="button operator"
+    onClick={[Function]}
+    type="button"
+  >
+    ÷
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    7
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    9
+  </button>
+  <button
+    className="button operator"
+    onClick={[Function]}
+    type="button"
+  >
+    x
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    6
+  </button>
+  <button
+    className="button operator"
+    onClick={[Function]}
+    type="button"
+  >
+    -
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="button digit"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="button operator"
+    onClick={[Function]}
+    type="button"
+  >
+    +
+  </button>
+  <button
+    className="button digit zero"
+    onClick={[Function]}
+    type="button"
+  >
+    0
+  </button>
+  <button
+    className="button other"
+    onClick={[Function]}
+    type="button"
+  >
+    .
+  </button>
+  <button
+    className="button operator"
+    onClick={[Function]}
+    type="button"
+  >
+    =
+  </button>
+</div>
+`;
+
+exports[`operate(numberOne, numberTwo, operation) renders Header correctly 1`] = `
+<header>
+  <h1>
+    Math Magician
+  </h1>
+  <nav>
+    <ul>
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/calculator"
+          onClick={[Function]}
+        >
+          calculator
+        </a>
+      </li>
+      <li>
+        <a
+          href="/quotes"
+          onClick={[Function]}
+        >
+          quotes
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
+
+exports[`operate(numberOne, numberTwo, operation) renders Home correctly 1`] = `
+<section>
+  <h1>
+    Welcome to Math Magician!
+  </h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</section>
+`;
+
+exports[`operate(numberOne, numberTwo, operation) renders Quotes correctly 1`] = `
+<section>
+  <h2>
+    Qutoe:
+  </h2>
+  <p>
+    <q>
+      don't do drugs kids
+    </q>
+    <i>
+      --Mohi
+    </i>
+  </p>
+</section>
+`;
